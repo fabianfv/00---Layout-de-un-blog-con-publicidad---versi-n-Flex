@@ -1,0 +1,166 @@
+body {
+  font-family: "Manjari", sans-serif;
+  background-color: #897b5e;
+  color: #f6f4f4;
+  margin: 0 5vw;
+
+  --general-margin: 3vw;
+}
+
+div.flex-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header, main {
+  margin-bottom: var(--general-margin);
+}
+
+header, footer {
+  margin-top: var(--general-margin);
+}
+
+header > h1 {
+  font-weight: bold;
+  font-size: calc(1rem + 5vw);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2vw 0;
+}
+
+header > div.logo {
+  font-weight: bold;
+  font-size: calc(0.8rem + 3vw);
+  background-color: #1f1c11;
+  padding: 1.3vw 3vw;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/**********************
+* Entradas principales
+***********************/
+
+main > section.entradas {
+  border: 1px solid black;
+  padding: 3vw;
+  background-color: #7a6f57;
+  flex-basis: 58%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main > section.entradas > article.entrada {
+  background-color: #2e2c23;
+  padding: 2vw;
+  margin: 1.5vh 0;
+}
+
+main > section.entradas > article.entrada > h1.titulo {
+  font-size: calc(0.8rem + 1.8vw);
+  margin-bottom: 1.3vw;
+}
+
+main > section.entradas > article.entrada > p.contenido {
+  padding: 0.55vw 0;
+}
+
+/*******
+* Aside 
+********/
+
+main > aside {
+  flex-basis: 38%;
+  border: 1px solid black;
+  background-color: #2E2C23;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+  padding: 0 2vw;
+}
+
+main > aside > article.publicidad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/***********************
+* Entradas relacionadas
+************************/
+
+section.entradas-relacionadas {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+section.entradas-relacionadas > article.otra-entrada {
+  background-color: #2d3436;
+  text-align: center;
+  padding: 7vw 2vw;
+  margin: 1vw 0;
+}
+
+section.entradas-relacionadas > article.otra-entrada > h3.titulo {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+/*********
+* Footer 
+**********/
+
+footer {
+  background-color: #1F1C11;
+}
+
+footer > h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2vw 0;
+}
+
+/*******
+* Móvil
+********/
+
+@media (max-width: 650px) {
+
+  main {
+    flex-direction: column;
+  }
+
+  header > div.logo {
+    text-align: center;
+  }
+
+  header, section.entradas {
+    margin-bottom: 3vw;
+  }
+
+  section.entradas-relacionadas {
+    flex-direction: column;
+  }
+
+  main > aside > article.publicidad {
+    padding:3vw;
+  }
+
+  main > aside > article.publicidad > img {
+    width: 100%;
+  }
+
+}
